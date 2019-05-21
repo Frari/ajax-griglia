@@ -13,4 +13,14 @@
   height: 100px;
   border: 1px solid black;
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.verde{
+  background-color: green;
+}
+.giallo{
+  background-color: yellow;
 }

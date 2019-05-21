@@ -4,20 +4,30 @@
 // Se è <= 5 il quadrato diventa giallo, se è > di 5 il quadrato diventa verde.
 // Il numero ottenuto appare al centro del quadrato.
 $(document).ready(function(){
+
   $('.square').click(function(){
+
+    var elemento = $(this);
+
     $.ajax({
       url:'https://www.boolean.careers/api/random/int',
       metod: 'GET',
-      success: function(numero){
-        console.log(numero.response);
-        $('.square').append(numero.response);
+      success: function(res){
+        console.log(res);
+        elemento.text(res.response);
+        if(res.response>5){
+          elemento.addClass('verde');
+        }else{
+          elemento.addClass('giallo');
+        }
+
       },
       error: function(){
         alert('falso');
       }
     })
 
-
+    // function
 
   })
 });
