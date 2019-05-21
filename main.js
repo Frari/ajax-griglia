@@ -16,8 +16,14 @@ $(document).ready(function(){
         console.log(res);
         elemento.text(res.response);
         if(res.response>5){
+          if(elemento.hasClass('giallo')) {
+            elemento.removeClass('giallo');
+          }
           elemento.addClass('verde');
         }else{
+          if(elemento.hasClass('verde')) {
+            elemento.removeClass('verde');
+          }
           elemento.addClass('giallo');
         }
 
@@ -27,7 +33,6 @@ $(document).ready(function(){
       }
     })
 
-    // function
 
   })
 });
