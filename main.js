@@ -9,7 +9,8 @@ $(document).ready(function(){
       url:'https://www.boolean.careers/api/random/int',
       metod: 'GET',
       success: function(numero){
-        console.log(numero);
+        console.log(numero.response);
+        $('.square').append(numero.response);
       },
       error: function(){
         alert('falso');
